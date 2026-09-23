@@ -19,7 +19,7 @@ spec:
       containers:
         - name: dev-homework
           # image: idkisme/dev-homework:v9
-          image: idkisme/dev-homework:9
+          image: idkisme/dev-homework:v10
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
