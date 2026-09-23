@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-homework
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev-homework
+  template:
+    metadata:
+      labels:
+        app: dev-homework
+    spec:
+      containers:
+        - name: dev-homework
+          image: idkisme/dev-homework:v1
+          ports:
+            - containerPort: 3000
