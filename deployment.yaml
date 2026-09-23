@@ -2,18 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dev-homework
+  namespace: dev-homework
 spec:
   replicas: 1
+
   selector:
     matchLabels:
       app: dev-homework
+
   template:
     metadata:
       labels:
         app: dev-homework
+
     spec:
       containers:
         - name: dev-homework
-          image: idkisme/dev-homework:v1
+          image: idkisme/dev-homework:v9
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
